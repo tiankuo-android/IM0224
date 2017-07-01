@@ -24,39 +24,45 @@
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
     <application
+        android:name=".activity.MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/atguigu_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
+        <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.LoginActivity"></activity>
 
-    <!-- 设置环信应用的appkey -->
-    <meta-data
-        android:name="EASEMOB_APPKEY"
-        android:value="1144170701115027#im0224" />
-    <!-- 声明sdk所需的service -->
-    <service android:name="com.hyphenate.chat.EMChatService"
-        android:exported="true"
-        />
-    <!-- 声明sdk所需的receiver -->
-    <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
-        <intent-filter>
-            <action android:name="android.intent.action.PACKAGE_REMOVED"/>
-            <data android:scheme="package"/>
-        </intent-filter>
-        <!-- 可选filter -->
-        <intent-filter>
-            <action android:name="android.intent.action.BOOT_COMPLETED"/>
-            <action android:name="android.intent.action.USER_PRESENT" />
-        </intent-filter>
-    </receiver>
+
+        <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1144170701115027#im0224" />
+        <!-- 声明sdk所需的service -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <!-- 声明sdk所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+
+    </application>
 
 </manifest>
