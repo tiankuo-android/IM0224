@@ -1,0 +1,1 @@
+include ':app', ':easeUIDemo_CN', ':easeUI_CN', ':redpacketlibrary'
