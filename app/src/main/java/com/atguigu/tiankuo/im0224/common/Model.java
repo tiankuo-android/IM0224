@@ -3,6 +3,7 @@ package com.atguigu.tiankuo.im0224.common;
 import android.content.Context;
 
 import com.atguigu.tiankuo.im0224.bean.UserInfo;
+import com.atguigu.tiankuo.im0224.model.AccoutDAO;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -14,6 +15,8 @@ import java.util.concurrent.Executors;
  */
 
 public class Model {
+
+    private AccoutDAO accoutDAO;
 
     private Context context;
 
@@ -28,6 +31,7 @@ public class Model {
 
     public void init(Context context){
         this.context = context;
+        accoutDAO = new AccoutDAO(context);
     }
 
     private ExecutorService service = Executors.newCachedThreadPool();
@@ -38,6 +42,11 @@ public class Model {
 
     //登录成功之后保存用户数据
     public void loginSuccess(UserInfo userInfo){
+        //添加用户
+        accoutDAO.addAccout(userInfo);
+    }
 
+    public AccoutDAO getAccoutDAO(){
+        return accoutDAO;
     }
 }
