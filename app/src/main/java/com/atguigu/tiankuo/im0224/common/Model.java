@@ -2,8 +2,8 @@ package com.atguigu.tiankuo.im0224.common;
 
 import android.content.Context;
 
-import com.atguigu.tiankuo.im0224.bean.UserInfo;
-import com.atguigu.tiankuo.im0224.model.AccoutDAO;
+import com.atguigu.tiankuo.im0224.model.bean.UserInfo;
+import com.atguigu.tiankuo.im0224.model.dao.AccoutDAO;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

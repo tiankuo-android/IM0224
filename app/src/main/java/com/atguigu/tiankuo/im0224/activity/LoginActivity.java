@@ -8,7 +8,7 @@ import android.widget.EditText;
 
 import com.atguigu.tiankuo.im0224.R;
 import com.atguigu.tiankuo.im0224.base.BaseActivity;
-import com.atguigu.tiankuo.im0224.bean.UserInfo;
+import com.atguigu.tiankuo.im0224.model.bean.UserInfo;
 import com.atguigu.tiankuo.im0224.common.Model;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
