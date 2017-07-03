@@ -58,7 +58,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void initData() {
-        switchFragment(R.id.rb_main_contact);
+        switchFragment(R.id.rb_main_conversation);
     }
 
     @Override

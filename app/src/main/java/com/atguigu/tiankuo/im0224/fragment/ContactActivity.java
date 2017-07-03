@@ -18,7 +18,7 @@ public class ContactActivity extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         TextView textView = new TextView(getActivity());
-        textView.setText("1111");
+        textView.setText("2222");
         return textView;
 
     }

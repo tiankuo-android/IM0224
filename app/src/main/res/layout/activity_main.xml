@@ -27,13 +27,11 @@
         <RadioButton
             android:id="@+id/rb_main_contact"
             style="@style/MainButtonStyle"
-            android:checked="true"
             android:text="联系人" />
 
         <RadioButton
             android:id="@+id/rb_main_setting"
             style="@style/MainButtonStyle"
-            android:checked="true"
             android:text="设置" />
 
     </RadioGroup>
