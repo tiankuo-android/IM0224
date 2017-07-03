@@ -62,7 +62,7 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".fragment.AddContactActivity"></activity>
+        <activity android:name=".activity.AddContactActivity"></activity>
     </application>
 
 </manifest>

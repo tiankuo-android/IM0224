@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import com.atguigu.tiankuo.im0224.R;
+import com.atguigu.tiankuo.im0224.activity.AddContactActivity;
 import com.atguigu.tiankuo.im0224.utils.UIUtils;
 import com.hyphenate.easeui.ui.EaseContactListFragment;
 
