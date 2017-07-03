@@ -32,6 +32,8 @@ public class Model {
     public void init(Context context){
         this.context = context;
         accoutDAO = new AccoutDAO(context);
+        //初始化全局监听
+        new GlobalListener(context);
     }
 
     private ExecutorService service = Executors.newCachedThreadPool();
