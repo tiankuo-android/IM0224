@@ -2,6 +2,7 @@ package com.atguigu.tiankuo.im0224.activity;
 
 import android.app.Application;
 
+import com.atguigu.tiankuo.im0224.common.Model;
 import com.hyphenate.chat.EMOptions;
 import com.hyphenate.easeui.controller.EaseUI;
 
@@ -27,5 +28,8 @@ public class MyApplication extends Application {
         options.setAutoAcceptGroupInvitation(false);
         //初始化EaseUI
         EaseUI.getInstance().init(this,options);
+
+        //初始化modle
+        Model.getInstance().init(this);
     }
 }
