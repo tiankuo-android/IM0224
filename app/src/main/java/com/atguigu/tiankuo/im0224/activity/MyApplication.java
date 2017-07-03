@@ -1,6 +1,8 @@
 package com.atguigu.tiankuo.im0224.activity;
 
 import android.app.Application;
+import android.content.Context;
+import android.os.Handler;
 
 import com.atguigu.tiankuo.im0224.common.Model;
 import com.hyphenate.chat.EMOptions;
@@ -13,6 +15,23 @@ import com.hyphenate.easeui.controller.EaseUI;
  */
 
 public class MyApplication extends Application {
+
+    private static Context context;
+    private static Handler handler;
+    private static int pid;
+
+    public static Context getContext() {
+        return context;
+    }
+
+    public static Handler getHandler() {
+        return handler;
+    }
+
+    public static int getPid() {
+        return pid;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -31,5 +50,9 @@ public class MyApplication extends Application {
 
         //初始化modle
         Model.getInstance().init(this);
+
+        handler = new Handler();
+        pid = android.os.Process.myPid();
+        context = this;
     }
 }
