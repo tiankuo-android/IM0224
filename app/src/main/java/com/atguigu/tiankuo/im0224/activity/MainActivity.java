@@ -8,9 +8,9 @@ import android.widget.RadioGroup;
 
 import com.atguigu.tiankuo.im0224.R;
 import com.atguigu.tiankuo.im0224.base.BaseActivity;
-import com.atguigu.tiankuo.im0224.fragment.ContactActivity;
-import com.atguigu.tiankuo.im0224.fragment.ConversationActivity;
-import com.atguigu.tiankuo.im0224.fragment.SettingsActivity;
+import com.atguigu.tiankuo.im0224.fragment.ContactFragment;
+import com.atguigu.tiankuo.im0224.fragment.ConversationFragment;
+import com.atguigu.tiankuo.im0224.fragment.SettingsFragment;
 
 import butterknife.Bind;
 
@@ -44,13 +44,13 @@ public class MainActivity extends BaseActivity {
 
         switch (checkedId) {
             case R.id.rb_main_contact :
-                fragment = new ContactActivity();
+                fragment = new ContactFragment();
                 break;
             case R.id.rb_main_conversation :
-                fragment = new ConversationActivity();
+                fragment = new ConversationFragment();
                 break;
             case R.id.rb_main_setting :
-                fragment = new SettingsActivity();
+                fragment = new SettingsFragment();
                 break;
         }
         getSupportFragmentManager().beginTransaction().replace(R.id.main_fl,fragment).commit();
