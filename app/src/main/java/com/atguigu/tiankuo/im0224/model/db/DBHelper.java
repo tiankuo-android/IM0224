@@ -24,7 +24,7 @@ public class DBHelper extends SQLiteOpenHelper {
         //联系人表
         db.execSQL(ContactTable.CREATE_TABLE);
         //邀请联系人表
-        db.execSQL(InvitationTable.CREAT_TABLE);
+        db.execSQL(InvitationTable.CREATE_TABLE);
     }
 
     @Override

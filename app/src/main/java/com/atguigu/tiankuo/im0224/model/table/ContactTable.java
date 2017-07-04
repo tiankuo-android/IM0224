@@ -17,8 +17,8 @@ public class ContactTable {
 
     public static final String COL_IS_CONTACT = "contact";
 
-    public static final String CREATE_TABLE = "creat table " + TABLE_NAME + "("
-            + COL_USER_NAME + " text primary key,"
-            +COL_USER_HXID + " text,"
-            +COL_IS_CONTACT + " integer)";
+    public static final String CREATE_TABLE = "create table " + TABLE_NAME + "("
+            + COL_USER_HXID + " text primary key,"
+            + COL_USER_NAME + " text,"
+            + COL_IS_CONTACT + " integer)";
 }

@@ -14,9 +14,9 @@ public class InvitationTable {
     public static final String COL_REASON = "reason";
     public static final String COL_STATE = "state";
 
-    public static final String CREAT_TABLE = "create table " + TABLE_NAME +"("
-            + COL_USER_NAME + " text primary key,"
-            + COL_USER_HXID + " text,"
+    public static final String CREATE_TABLE = "create table " + TABLE_NAME +"("
+            + COL_USER_HXID + " text primary key,"
+            + COL_USER_NAME + " text,"
             + COL_REASON + " text,"
             + COL_STATE + " integer)";
 }

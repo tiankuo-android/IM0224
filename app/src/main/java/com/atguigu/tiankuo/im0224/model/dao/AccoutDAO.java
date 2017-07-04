@@ -45,7 +45,7 @@ public class AccoutDAO {
             return null;
         }
         SQLiteDatabase dataBase = accountDB.getWritableDatabase();
-        String sql = "select + from " + AccountTable.COL_NAME
+        String sql = "select + from " + AccountTable.TABLE_NAME
                 + " where " + AccountTable.COL_HXID + "=?";
 
         Cursor cursor = dataBase.rawQuery(sql, new String[]{hxid});

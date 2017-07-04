@@ -41,7 +41,7 @@ public class AccountDB extends SQLiteOpenHelper {
     //创建数据库
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(AccountTable.CREAT_TABLE);
+        db.execSQL(AccountTable.CREATE_TABLE);
     }
 
     //更新数据库

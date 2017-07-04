@@ -35,7 +35,7 @@ public class InviteActivity extends BaseActivity {
         refreshData();
     }
 
-    private void refreshData() {
+    public void refreshData() {
         //获取数据
         List<InvitationInfo> invitationInfos = Model.getInstance().getHelperManager().getInvitationDAO().getInvitations();
         if (invitationInfos != null) {
