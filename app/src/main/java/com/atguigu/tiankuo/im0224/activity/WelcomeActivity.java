@@ -6,6 +6,7 @@ import android.os.CountDownTimer;
 import com.atguigu.tiankuo.im0224.R;
 import com.atguigu.tiankuo.im0224.base.BaseActivity;
 import com.atguigu.tiankuo.im0224.model.Model;
+import com.atguigu.tiankuo.im0224.model.bean.UserInfo;
 import com.hyphenate.chat.EMClient;
 
 /**
@@ -54,13 +55,16 @@ public class WelcomeActivity extends BaseActivity {
             public void run() {
                 //是否登录过环信服务器
                 boolean isLoginHx = EMClient.getInstance().isLoggedInBefore();
-                if(isLoginHx) {
+                if (isLoginHx) {
                     //登录过
-                    startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
+                    //初始化登录成功后的操作
+                    String currentUser = EMClient.getInstance().getCurrentUser();
+                    Model.getInstance().loginSuccess(new UserInfo(currentUser, currentUser));
+                    startActivity(new Intent(WelcomeActivity.this, MainActivity.class));
                     finish();
-                }else {
+                } else {
                     //没登录过
-                    startActivity(new Intent(WelcomeActivity.this,LoginActivity.class));
+                    startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
                     finish();
                 }
             }

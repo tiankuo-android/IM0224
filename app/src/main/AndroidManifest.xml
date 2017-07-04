@@ -62,7 +62,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".activity.AddContactActivity"></activity>
+        <activity android:name=".activity.AddContactActivity" />
+        <activity android:name=".activity.InviteActivity"></activity>
     </application>
 
 </manifest>
