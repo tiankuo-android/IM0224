@@ -52,6 +52,9 @@ public class Model {
             helperManager.close();
         }
         helperManager = new HelperManager(context,userInfo.getUsername()+ ".db");
+
+        //初始化SPUtils
+
     }
 
     public AccoutDAO getAccoutDAO(){
