@@ -4,7 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Handler;
 
-import com.atguigu.tiankuo.im0224.common.Model;
+import com.atguigu.tiankuo.im0224.model.Model;
 import com.hyphenate.chat.EMOptions;
 import com.hyphenate.easeui.controller.EaseUI;
 

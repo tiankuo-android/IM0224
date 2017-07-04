@@ -5,7 +5,7 @@ import android.os.CountDownTimer;
 
 import com.atguigu.tiankuo.im0224.R;
 import com.atguigu.tiankuo.im0224.base.BaseActivity;
-import com.atguigu.tiankuo.im0224.common.Model;
+import com.atguigu.tiankuo.im0224.model.Model;
 import com.hyphenate.chat.EMClient;
 
 /**

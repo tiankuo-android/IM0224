@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.atguigu.tiankuo.im0224.R;
 import com.atguigu.tiankuo.im0224.base.BaseActivity;
-import com.atguigu.tiankuo.im0224.common.Model;
+import com.atguigu.tiankuo.im0224.model.Model;
 import com.atguigu.tiankuo.im0224.utils.UIUtils;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.exceptions.HyphenateException;
