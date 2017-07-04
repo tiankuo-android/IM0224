@@ -22,8 +22,8 @@
         android:id="@+id/btn_back"
         android:background="@android:color/holo_red_light"
         android:textColor="@android:color/white"
-        android:textSize="75sp"
+        android:textSize="35sp"
         android:text="退出登录"
         android:layout_width="match_parent"
-        android:layout_height="25dp" />
+        android:layout_height="50dp" />
 </LinearLayout>

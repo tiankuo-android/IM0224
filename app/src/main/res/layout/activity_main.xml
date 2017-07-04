@@ -26,6 +26,7 @@
             style="@style/MainButtonStyle"
             android:checked="true"
             android:text="会话" />
+
         <RadioButton
             android:id="@+id/rb_main_contact"
             style="@style/MainButtonStyle"
