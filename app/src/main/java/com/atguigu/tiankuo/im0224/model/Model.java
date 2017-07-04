@@ -5,6 +5,7 @@ import android.content.Context;
 import com.atguigu.tiankuo.im0224.common.GlobalListener;
 import com.atguigu.tiankuo.im0224.model.bean.UserInfo;
 import com.atguigu.tiankuo.im0224.model.dao.AccoutDAO;
+import com.atguigu.tiankuo.im0224.utils.SPUtils;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -54,7 +55,7 @@ public class Model {
         helperManager = new HelperManager(context,userInfo.getUsername()+ ".db");
 
         //初始化SPUtils
-
+        SPUtils.getSpUtils().init(context,userInfo.getUsername());
     }
 
     public AccoutDAO getAccoutDAO(){

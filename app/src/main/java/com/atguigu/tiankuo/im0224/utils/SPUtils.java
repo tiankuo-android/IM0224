@@ -12,6 +12,8 @@ import android.content.SharedPreferences;
 public class SPUtils {
     private SharedPreferences sp;
 
+    public static final String NEW_INVITE = "newInvite";
+
     private SPUtils() {
     }
 
