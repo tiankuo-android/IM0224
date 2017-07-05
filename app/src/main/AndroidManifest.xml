@@ -64,6 +64,7 @@
 
         <activity android:name=".activity.AddContactActivity" />
         <activity android:name=".activity.InviteActivity" />
+        <activity android:name=".activity.ChatActivity"></activity>
     </application>
 
 </manifest>

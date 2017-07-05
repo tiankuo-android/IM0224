@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 
 import com.atguigu.tiankuo.im0224.R;
 import com.atguigu.tiankuo.im0224.activity.AddContactActivity;
+import com.atguigu.tiankuo.im0224.activity.ChatActivity;
 import com.atguigu.tiankuo.im0224.activity.InviteActivity;
 import com.atguigu.tiankuo.im0224.common.Constant;
 import com.atguigu.tiankuo.im0224.model.Model;
@@ -21,6 +22,7 @@ import com.atguigu.tiankuo.im0224.model.bean.UserInfo;
 import com.atguigu.tiankuo.im0224.utils.SPUtils;
 import com.atguigu.tiankuo.im0224.utils.UIUtils;
 import com.hyphenate.chat.EMClient;
+import com.hyphenate.easeui.EaseConstant;
 import com.hyphenate.easeui.domain.EaseUser;
 import com.hyphenate.easeui.ui.EaseContactListFragment;
 import com.hyphenate.exceptions.HyphenateException;
@@ -57,6 +59,15 @@ public class ContactFragment extends EaseContactListFragment {
 
     protected void initView() {
         super.initView();
+
+        setContactListItemClickListener(new EaseContactListItemClickListener() {
+            @Override
+            public void onListItemClicked(EaseUser user) {
+                Intent intent = new Intent(getActivity(), ChatActivity.class);
+                intent.putExtra(EaseConstant.EXTRA_USER_ID,user.getUsername());
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

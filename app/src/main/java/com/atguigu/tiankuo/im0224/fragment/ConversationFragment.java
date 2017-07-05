@@ -1,25 +1,74 @@
 package com.atguigu.tiankuo.im0224.fragment;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.content.Intent;
 
-import com.atguigu.tiankuo.im0224.R;
+import com.atguigu.tiankuo.im0224.activity.ChatActivity;
+import com.hyphenate.EMMessageListener;
+import com.hyphenate.chat.EMClient;
+import com.hyphenate.chat.EMConversation;
+import com.hyphenate.chat.EMMessage;
+import com.hyphenate.easeui.EaseConstant;
+import com.hyphenate.easeui.controller.EaseUI;
+import com.hyphenate.easeui.ui.EaseConversationListFragment;
+
+import java.util.List;
 
 /**
  * 作者：田阔
  * 邮箱：1226147264@qq.com
  * Created by Administrator on 2017/7/3 0003.
  */
-public class ConversationFragment extends Fragment {
-    @Nullable
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = View.inflate(getContext(), R.layout.fragment_conversation,null);
-        return view;
+public class ConversationFragment extends EaseConversationListFragment{
 
+    private EMMessageListener emMessageListener = new EMMessageListener() {
+        @Override
+        public void onMessageReceived(List<EMMessage> list) {
+            //设置数据
+            EaseUI.getInstance().getNotifier().onNewMesg(list);
+            //刷新列表
+            refresh();
+        }
+
+        @Override
+        public void onCmdMessageReceived(List<EMMessage> list) {
+
+        }
+
+        @Override
+        public void onMessageReadAckReceived(List<EMMessage> list) {
+
+        }
+
+        @Override
+        public void onMessageDeliveryAckReceived(List<EMMessage> list) {
+
+        }
+
+        @Override
+        public void onMessageChanged(EMMessage emMessage, Object o) {
+
+        }
+    };
+
+    protected void setUpView(){
+        super.setUpView();
+    }
+
+    @Override
+    protected void initView() {
+        super.initView();
+        //监听消息会话的变化
+        EMClient.getInstance().chatManager().addMessageListener(emMessageListener);
+
+        //item的点击事件
+        setConversationListItemClickListener(new EaseConversationListItemClickListener() {
+            @Override
+            public void onListItemClicked(EMConversation conversation) {
+                //跳转到聊天界面
+                Intent intent = new Intent(getActivity(), ChatActivity.class);
+                intent.putExtra(EaseConstant.EXTRA_USER_ID,conversation.getUserName());
+                startActivity(intent);
+            }
+        });
     }
 }
